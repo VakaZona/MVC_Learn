@@ -1,12 +1,15 @@
 <?php
 namespace App\Controllers;
+use \Core\View;
+use \App\Models;
 
 class Posts extends \Core\Controller
 {
     public function indexAction()
     {
-        echo "Index<br>";
-        echo '<p> Query string parameters:<pre>'. htmlspecialchars(print_r($_GET, true)) . '</pre></p>';
+        $posts = Models\Post::getAll();
+        //echo '<p> Query string parameters:<pre>'. htmlspecialchars(print_r($_GET, true)) . '</pre></p>';
+        View::renderTemplate('Posts/index.twig',['posts' => $posts]);
 
 
     }

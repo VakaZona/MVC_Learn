@@ -1,19 +1,20 @@
 <?php
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+require_once '../vendor/autoload.php';
+
 
 
 
 //require "../Core/Router.php";
 //require "../App/Controllers/Posts.php";
 //echo 'Requested URL = "' . $_SERVER['QUERY_STRING'] . '"';
-spl_autoload_register(function ($class){
+/*spl_autoload_register(function ($class){
     $root = dirname(__DIR__);
     $file = $root . '/' . str_replace('\\', '/', $class) . '.php';
     if (is_readable($file)){
         require $root . '/' . str_replace('\\', '/', $class) . '.php';
     }
-});
+});*/
 //Routes
 $router = new Core\Router();
 //add
