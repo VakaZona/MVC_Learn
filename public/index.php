@@ -1,8 +1,10 @@
 <?php
 
 require_once '../vendor/autoload.php';
+//use Core\Errors;
 
-
+set_error_handler('\Core\Errors::errorHandler');
+set_exception_handler('\Core\Errors::exceptionHandler');
 
 
 //require "../Core/Router.php";
