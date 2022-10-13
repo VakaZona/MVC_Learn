@@ -1,0 +1,15 @@
+{
+  "name": "vendor_name/mvclearn",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "zonov",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "twig/twig": "^3.4"
+  }
+}

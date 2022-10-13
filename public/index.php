@@ -1,5 +1,9 @@
 <?php
 
+require_once dirname(__DIR__) . '/vendor/autoload.php';
+
+
+
 //require "../Core/Router.php";
 //require "../App/Controllers/Posts.php";
 //echo 'Requested URL = "' . $_SERVER['QUERY_STRING'] . '"';
@@ -13,7 +17,7 @@ spl_autoload_register(function ($class){
 //Routes
 $router = new Core\Router();
 //add
-$router->add('', ['controller' => 'Home', 'actions' => 'index']);
+$router->add('', ['controller' => 'Home', 'action' => 'index']);
 //$router->add('posts', ['controller' => 'Posts', 'actions' => 'index']);
 //$router->add('posts/new', ['controller' => 'Posts', 'actions' => 'new']);
 $router->add('{controller}/{action}');
@@ -38,4 +42,5 @@ if ($router->match($url)){
     echo "No route found fo URL";
 }
 */
+
 $router->dispath($_SERVER['QUERY_STRING']);
